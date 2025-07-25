@@ -1,16 +1,16 @@
 Version=58
-FLAVOR=FLUX
-FLUX=
+FLAVOR=VULCAN
 LANGUAGE=EN
-Folders=21
-Pages=363
+VULCAN=
+Folders=22
+Pages=368
 UIXlate=False, DebugUIXlate=False, Language=EN
 
 contents.txt • 253116.113143
 Features.adoc • Features
 impressum.adoc • Impressum
 index.adoc • Vulcan OEM Manual
-manifest.txt • 255908.055958
+manifest.txt • 255225.115240
 1_Intro\contents.txt • 253116.113143
 1_Intro\DINLST.adoc • Changing the GCode format
 1_Intro\Flavor.adoc • Changing the Flavor
@@ -76,7 +76,7 @@ Programmingmanual\Index.adoc • Programming manual
 2_Settings\AxisParameters\SpeedAcceleration.adoc • Speed & Acceleration
 2_Settings\AxisParameters\Synchronous.adoc • Synchronous
 2_Settings\GeneralParameters\AxesCorrection.adoc • Axes Correction File
-2_Settings\GeneralParameters\contents.txt • 250530.060504
+2_Settings\GeneralParameters\contents.txt • 255225.115220
 2_Settings\GeneralParameters\CONTROLLER.adoc • Controller
 2_Settings\GeneralParameters\General.adoc • General
 2_Settings\GeneralParameters\index.adoc • General Parameters
@@ -85,12 +85,12 @@ Programmingmanual\Index.adoc • Programming manual
 2_Settings\PLCOptions\ControlParameters.adoc • Control Parameters
 2_Settings\PLCOptions\index.adoc • PLC Options
 2_Settings\PLCOptions\PLCKEYS.adoc • PLC Keys
-2_Settings\TechnologyParameters\ANALOGSCAL.adoc • ANALOG SCALING
-2_Settings\TechnologyParameters\contents.txt • 252425.122456
-2_Settings\TechnologyParameters\EXHAUSTSYS.adoc • EXHAUST SYSTEM
-2_Settings\TechnologyParameters\index.adoc • TECHNOLOGY PARAMETERS
-2_Settings\TechnologyParameters\LASERTECHN.adoc • LASER TECHNOLOGY
-2_Settings\TechnologyParameters\MFUNCTIONS.adoc • M FUNCTIONS
+2_Settings\TechnologyParameters\AnalogScaling.adoc • Analog Scaling
+2_Settings\TechnologyParameters\contents.txt • 255225.115240
+2_Settings\TechnologyParameters\ExhaustSystem.adoc • Exhaust System
+2_Settings\TechnologyParameters\index.adoc • Technology Parameters
+2_Settings\TechnologyParameters\MachineDatabase.adoc • Machine Database
+2_Settings\TechnologyParameters\MFUNCTIONS.adoc • M Functions
 3_Errormsg\HMI_Error\contents.txt • 253013.113012
 3_Errormsg\HMI_Error\E1.1.101.adoc • 1.1.101
 3_Errormsg\HMI_Error\E1.1.102.adoc • 1.1.102
@@ -548,6 +548,12 @@ Programmingmanual\LST\TCWrite.adoc • TCWrite
 2_Settings\PLCOptions\FunctionParameters\PalletChangerConfig.adoc • :imagesdir: img
 2_Settings\PLCOptions\FunctionParameters\PLCCustomPara.adoc • :imagesdir: img
 2_Settings\PLCOptions\FunctionParameters\TandemOperation.adoc • :imagesdir: img
+2_Settings\TechnologyParameters\LaserTechnology\contents.txt • 255225.115240
+2_Settings\TechnologyParameters\LaserTechnology\CustomPara1.adoc • Custom Parameters 1
+2_Settings\TechnologyParameters\LaserTechnology\CustomPara2.adoc • Custom Parameters 2
+2_Settings\TechnologyParameters\LaserTechnology\CustomPara3.adoc • Custom Parameters 3
+2_Settings\TechnologyParameters\LaserTechnology\CustomPara4.adoc • Custom Parameters 4
+2_Settings\TechnologyParameters\LaserTechnology\Index.adoc • Laser Technology
 4_Machinespecific\L99schematics\img\Schematics-1.pdf
 4_Machinespecific\L99schematics\img\Schematics-10.pdf
 4_Machinespecific\L99schematics\img\Schematics-100.pdf

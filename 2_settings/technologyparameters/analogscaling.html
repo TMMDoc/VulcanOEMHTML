@@ -11,11 +11,11 @@
   <link rel="stylesheet" href="../../res/sibling.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="icon" type="image/x-icon" href="../../img/flux-icon.png">
-  <title>LASER TECHNOLOGY</title>
+  <title>Analog Scaling</title>
 </head>
 <body id="site-body" onload="sLoaded()">
     <header id="site-header">
-        <div id="header-logo"><img src="../../img/logo.png" width="103" height="34" /></div>
+        <div id="header-logo"><img src="../../img/logo.png" width="207" height="34" /></div>
         <div><p>Vulcan OEM Manual</p></div>
     </header>
     <div id="site-main">
@@ -78,12 +78,22 @@
     </li>
     <li>
      <button class="tree open"></button>
-     <a href="index.html">TECHNOLOGY PARAMETERS</a>
+     <a href="index.html">Technology Parameters</a>
      <ul>
-      <li><button class="tree blank"></button><a href="analogscal.html">ANALOG SCALING</a></li>
-      <li><button class="tree blank"></button><a href="mfunctions.html">M FUNCTIONS</a></li>
-      <li><button class="tree blank"></button><a class="active" href="lasertechn.html">LASER TECHNOLOGY</a></li>
-      <li><button class="tree blank"></button><a href="exhaustsys.html">EXHAUST SYSTEM</a></li>
+      <li><button class="tree blank"></button><a class="active" href="analogscaling.html">Analog Scaling</a></li>
+      <li><button class="tree blank"></button><a href="mfunctions.html">M Functions</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="lasertechnology/index.html">Laser Technology</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="lasertechnology/custompara1.html">Custom Parameters 1</a></li>
+        <li><button class="tree blank"></button><a href="lasertechnology/custompara2.html">Custom Parameters 2</a></li>
+        <li><button class="tree blank"></button><a href="lasertechnology/custompara3.html">Custom Parameters 3</a></li>
+        <li><button class="tree blank"></button><a href="lasertechnology/custompara4.html">Custom Parameters 4</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="exhaustsystem.html">Exhaust System</a></li>
+      <li><button class="tree blank"></button><a href="machinedatabase.html">Machine Database</a></li>
      </ul>
     </li>
     <li>
@@ -476,551 +486,44 @@
  </div>
  <div>/</div>
  <div>
-  <a href="index.html">TECHNOLOGY PARAMETERS</a>
+  <a href="index.html">Technology Parameters</a>
  </div>
  <div>/</div>
  <div>
-  <a href="lasertechn.html">LASER TECHNOLOGY</a>
+  <a href="analogscaling.html">Analog Scaling</a>
  </div>
 </nav>
 
             <div id="site-crumb-below">
                 <div id="site-toc-left">
                     <article id="article">
-                        <h1>LASER TECHNOLOGY</h1>
-<div class="sect1">
-<h2 id="_custom_parameters_1">CUSTOM_PARAMETERS 1</h2>
-<div class="sectionbody">
+                        <h1>Analog Scaling</h1>
 <div class="paragraph">
-<p>It contains 10 entries which are stored one to one in the parameter field from <strong>P760-P769</strong> and can be used there arbitrarily.
-Select Technology parameter and choose Laser technology.</p>
+<p>Select Technology Parameters and choose Analog Scaling.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="img/image25.png" alt="image25" width="567" height="455"></span></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_1_x_axis_park_position_p760">1 X-axis Park position_ (P760</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>This is the X-axis Park position value in mm, used in the Park Position program.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_2_y_axis_park_position_p761">2 Y-axis Park position_ (P761</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>This is the Y-axis Park position value in mm, used in the Park Position program.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_3_test_run_feedrate_p762">3 Test Run Feedrate_ (P762</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>It is the speed assigned for Test Run in mm/min. Test run works only with X and Y axis movements and Z axis will be locked. Laser power and assist gas is not required for Test run.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_4_frog_jump_adjust_distance_p763">4 Frog Jump adjust distance_ (P763</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>It is the adjust distance in mm between contours in a program, to start positioning the cutting head to next point. For ex: P763 = 4mm, and the distance between the contour is 10mm, then when the cutting is finished in the current contour, the head moves up and start position for the next contour 4mm before the destination point. Suppose if the distance between the contour is &lt; 4mm, then the positioning will happen based on the time.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_5_frog_jump_adjust_time_p764">5 Frog Jump adjust time_ (P764</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>It is the adjust time in ms between contours in a program, to start positioning the cutting head to next point. For ex: P764 = 20ms, and the time taken between the contour is 100ms, then when the cutting is finished in the current contour, the head moves up and start position for the next contour 20ms before the destination point.</p>
-</li>
-</ul>
+<p><span class="image"><img src="img/analogscaling.png" alt="analogscaling" width="700"></span></p>
 </div>
 <div class="paragraph">
-<p><strong><em>Note: The Frog Jump is adjusted in 2 modes as distance &amp; time, whichever comes first will activate the head motion. Hence based on the Machine dynamics, an appropriate value should be assigned.</em></strong></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_6_contour_end_control_time_off_p765">6 Contour End Control Time OFF_ (P765</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>It is the adjust time in ms before the end of contour completion (M15 command), to control the contour end functions such as height control freeze, beam off etc., For ex: P765 = 20ms, if the end functions are activated, then it will be enabled 20ms before the end of contour.</p>
-</li>
-</ul>
+<p>It configures the resolution of the local analog inputs, which are stored in the
+parameter field from P288, in units/volt. For a path measurement, the
+information from "mm/V" corresponding to the resolution of the connected
+measurement device can be defined.</p>
 </div>
 <div class="paragraph">
-<p><strong><em>Note: Primarily, this function will be activated based on the distance specified in the Laser DB, if the distance is lesser than the contour length, then it will be activated based on this time.</em></strong></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_7_contour_end_parameter_time_off_p766">7 Contour End Parameter Time OFF_ (P766</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>It is the adjust time in ms before the end of contour completion (M15 command), to activate the ‘End Parameters’. For ex: P766 = 100ms, if the End Parameter function is activated then the last 100ms contour length will be processed with ‘End Parameters’</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong><em>Note: Primarily, this function will be activated based on the distance specified in the Laser DB, if the distance is lesser than the contour length, then it will be activated based on this time.</em></strong></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_8_delay_before_start_of_cut_p767">8 Delay before start of cut_ (P767</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>This is the wait time in ms followed by M14 command to start the contour motion.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_9_delay_after_end_of_cut_p768">9 Delay after end of cut_ (P768</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>This is the wait time in ms followed by M15 command to go to next contour position.
-<em>4.3.1.10 Laser HV ON Delay</em> (P769)</p>
-</li>
-<li>
-<p>This is the delay time in secs, between the Laser Controls ON and Power Supply ON output. It is required for some type of oscillator such as IPG.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_custom_parameters_2">CUSTOM_PARAMETERS 2</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>It contains 10 entries which are stored one to one in the parameter field from <strong>P770-P779</strong> and can be used there arbitrarily.
-Select Technology parameter and choose Laser technology.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="img/image26.png" alt="image26" width="568" height="456"></span></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_1_high_pressure_valve_p770">1 High Pressure Valve_ (P770</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>This is the maximum value of Pressure in Bar controlled by High pressure valve.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_2_low_pressure_valve_p771">2 Low Pressure Valve_ (P771</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>This is the maximum value of Pressure in Bar controlled by Low pressure valve. (Gas Type – O2LowPres)</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_3_gas_pressure_difference_to_generate_error_p772">3 Gas Pressure difference to generate error_ (P772</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>This is the Pressure difference value between Set &amp; Actual in %, to generate the Pressure error.
-For ex: If P772=10%, then difference between set &amp; actual pressure is &gt; 10%, then the error.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_4_high_pressure_to_clean_kerf_p773">4 High Pressure to clean kerf_ (P773</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>This is the maximum pressure value to clean the kerf at the end of piercing to clear the molten lava formed on top of the material.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_5_focus_ref_voltagefocal_cfg_for_procutter2_0_p774">5 Focus Ref Voltage/Focal Cfg for ProCutter2.0_ (P774</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>This parameter assigns 2 modes of values depends on the Cutting head type selected in the PLC Options.
-1. Precitec Auto Focus Head – the Parameter corresponds to Focus Ref Voltage in Volts
-2. Procutter2.0 EG8050 Head – the Parameter corresponds to Focal configuration as follows:
-i. 0 - 100/125
-ii. 1 - 100/150
-iii. 2 - 100/175
-iv. 3 - 100/200
-v. 4 - 75/150</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_6_focus_offset_voltage_p775">6 Focus Offset Voltage_ (P775</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>This value defines the Focus Offset voltage in Volts for Precitec Auto Focus Head.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_7_contour_lengthno_of_pierce_for_nozzle_cleaning_p776">7 Contour Length/No. of Pierce for Nozzle Cleaning_ (P776</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>-This parameter assigns 2 modes of values depends on the Auto Nozzle clean option selected in PLC options
-1. Auto Nozzle clean based on Contour Length – This parameter corresponds to Contour Length in mm
-2. Auto Nozzle clean based on No. of Pierce – This parameter corresponds to No. of Pierce in counts</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_8_height_control_sensor_gain_p777">8 Height Control Sensor Gain_ (P777</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>This is the Proportional amplification factor of the distance control [m/min/mm].</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_9_height_control_retract_speed_p778">9 Height Control Retract Speed_ (P778</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>This value defines the maximum retract speed of height control axis.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_10_collision_delay_time_p779">10 Collision delay time_ (P779</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>This is the wait time to react to Tip touch signal from the height control sensor. The reaction will be immediate stop of all the axis with high deceleration and jerk.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_custom_parameters_3">CUSTOM_PARAMETERS 3</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>It contains 10 entries which are stored one to one in the parameter field from <strong>P780-P789</strong> and can be used there arbitrarily.
-Select Technology parameter and choose Laser technology.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="img/image27.png" alt="image27" width="545" height="436"></span></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_1_gas_idle_purge_pressure_p780">1 Gas Idle purge pressure_ (P780</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>This value defines the gas pressure to be purged at the end of program completion or abort of the program, to avoid the entering of foreign particles into the Cutting head.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_2_z_axis_negative_limit_shuttle_table_p781">2 Z axis Negative Limit – Shuttle Table_ (P781</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>This defines the 2<sup>nd</sup> negative limit of Z axis, apart from the one defined in axis parameter. This value will be activated for the Upper Pallet if the Pallet has a 2 level of stages Upper/Lower level.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_3_exhaust_lag_time_to_stop_p782">3 Exhaust Lag time to Stop_ (P782</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>This defines the lag time to stop the dust collector after the completion of Program.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_4_min_distance_between_2_gantries_p783">4 Min Distance between 2 Gantries_ (P783</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>This defines the minimum distance between two gantries for Tandem Operation.
-Note: To identify the Master controller, this value should be defined only in Master Gantry, else will raise error, if defined in both the controller.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_5_tandem_maximum_machine_stroke_p784">5 Tandem Maximum Machine stroke_ (P784</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>This defines the maximum stroke of X axis specifically for Tandem Operation.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_6_gas_idle_purge_time_p785">6 Gas Idle Purge time_ (P785</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>This defines the maximum time limit for purging the assist gas at the end of program completion or abort of the program.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_7_gas_purge_pressure_before_start_of_pgm_p786">7 Gas Purge pressure before start of pgm_ (P786</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>This defines the pressure value for purging the assist gas before start of the program.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_8_gas_purge_time_before_start_of_pgm_p787">8 Gas Purge time before start of pgm_ (P787</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>This defines the time for purging assist gas before start of the program.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_9_z_axis_park_position_p788">9 Z-Axis Park Position_ (P788</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>This is the Z-axis Park position value in mm, used in the Park Position program.
-<em>4.3.3.10 X-axis Limit value for Nozzle Cleaning</em> (P789)</p>
-</li>
-<li>
-<p>This defines the limit of X axis for nozzle cleaning, the limit may be either “Positive” or “Negative” depends on the availability of the space to fix the Nozzle clean brush.
-For instance, there is a situation in the machine where the space to fix the Nozzle brush is only available in the negative direction of X-axis stroke but beyond the machine XY stroke limit, where the Y-axis cannot be travelled to full stroke.
-Hence, only during Nozzle Cleaning Program the X-axis limit will be changed to this value to perform the Nozzle cleaning operation and once completed, will change back to Machine limit.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_custom_parameters_4">CUSTOM_PARAMETERS 4</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>It contains 10 entries which are stored one to one in the parameter field from <strong>P790-P799</strong> and can be used there arbitrarily.
-Select Technology parameter and choose Laser technology.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="img/image28.png" alt="image28" width="553" height="443"></span></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_1_piercing_sensor_delay_time_p790">1 Piercing Sensor Delay Time_ (P790</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>It is a digital output. We use this delay time to avoid flickering. This sensor will be installed near the intensity light. Usually delay time will be 20-30ms.
-Other parameters are left free for future expansion or OEM’s can use this parameter to access in PLC to write their own functions.</p>
-</div>
-</div>
+<p>This MC provides an entry for the resolution for each of the 16 channels in the
+parameter field. The sequence is the same as that in the parameter field.</p>
 </div>
 
                     </article>
                 </div>
                 <div id="site-toc-holder">
-                    <aside id="site-toc">
- <h3>Contents</h3>
- <ul>
-  <li level="1">
-   <a href="#_custom_parameters_1">CUSTOM_PARAMETERS 1</a>
-  </li>
-  <li level="1">
-   <a href="#_1_x_axis_park_position_p760">1 X-axis Park position_ (P760</a>
-  </li>
-  <li level="1">
-   <a href="#_2_y_axis_park_position_p761">2 Y-axis Park position_ (P761</a>
-  </li>
-  <li level="1">
-   <a href="#_3_test_run_feedrate_p762">3 Test Run Feedrate_ (P762</a>
-  </li>
-  <li level="1">
-   <a href="#_4_frog_jump_adjust_distance_p763">4 Frog Jump adjust distance_ (P763</a>
-  </li>
-  <li level="1">
-   <a href="#_5_frog_jump_adjust_time_p764">5 Frog Jump adjust time_ (P764</a>
-  </li>
-  <li level="1">
-   <a href="#_6_contour_end_control_time_off_p765">6 Contour End Control Time OFF_ (P765</a>
-  </li>
-  <li level="1">
-   <a href="#_7_contour_end_parameter_time_off_p766">7 Contour End Parameter Time OFF_ (P766</a>
-  </li>
-  <li level="1">
-   <a href="#_8_delay_before_start_of_cut_p767">8 Delay before start of cut_ (P767</a>
-  </li>
-  <li level="1">
-   <a href="#_9_delay_after_end_of_cut_p768">9 Delay after end of cut_ (P768</a>
-  </li>
-  <li level="1">
-   <a href="#_custom_parameters_2">CUSTOM_PARAMETERS 2</a>
-  </li>
-  <li level="1">
-   <a href="#_1_high_pressure_valve_p770">1 High Pressure Valve_ (P770</a>
-  </li>
-  <li level="1">
-   <a href="#_2_low_pressure_valve_p771">2 Low Pressure Valve_ (P771</a>
-  </li>
-  <li level="1">
-   <a href="#_3_gas_pressure_difference_to_generate_error_p772">3 Gas Pressure difference to generate error_ (P772</a>
-  </li>
-  <li level="1">
-   <a href="#_4_high_pressure_to_clean_kerf_p773">4 High Pressure to clean kerf_ (P773</a>
-  </li>
-  <li level="1">
-   <a href="#_5_focus_ref_voltagefocal_cfg_for_procutter2_0_p774">5 Focus Ref Voltage/Focal Cfg for ProCutter2.0_ (P774</a>
-  </li>
-  <li level="1">
-   <a href="#_6_focus_offset_voltage_p775">6 Focus Offset Voltage_ (P775</a>
-  </li>
-  <li level="1">
-   <a href="#_7_contour_lengthno_of_pierce_for_nozzle_cleaning_p776">7 Contour Length/No. of Pierce for Nozzle Cleaning_ (P776</a>
-  </li>
-  <li level="1">
-   <a href="#_8_height_control_sensor_gain_p777">8 Height Control Sensor Gain_ (P777</a>
-  </li>
-  <li level="1">
-   <a href="#_9_height_control_retract_speed_p778">9 Height Control Retract Speed_ (P778</a>
-  </li>
-  <li level="1">
-   <a href="#_10_collision_delay_time_p779">10 Collision delay time_ (P779</a>
-  </li>
-  <li level="1">
-   <a href="#_custom_parameters_3">CUSTOM_PARAMETERS 3</a>
-  </li>
-  <li level="1">
-   <a href="#_1_gas_idle_purge_pressure_p780">1 Gas Idle purge pressure_ (P780</a>
-  </li>
-  <li level="1">
-   <a href="#_2_z_axis_negative_limit_shuttle_table_p781">2 Z axis Negative Limit – Shuttle Table_ (P781</a>
-  </li>
-  <li level="1">
-   <a href="#_3_exhaust_lag_time_to_stop_p782">3 Exhaust Lag time to Stop_ (P782</a>
-  </li>
-  <li level="1">
-   <a href="#_4_min_distance_between_2_gantries_p783">4 Min Distance between 2 Gantries_ (P783</a>
-  </li>
-  <li level="1">
-   <a href="#_5_tandem_maximum_machine_stroke_p784">5 Tandem Maximum Machine stroke_ (P784</a>
-  </li>
-  <li level="1">
-   <a href="#_6_gas_idle_purge_time_p785">6 Gas Idle Purge time_ (P785</a>
-  </li>
-  <li level="1">
-   <a href="#_7_gas_purge_pressure_before_start_of_pgm_p786">7 Gas Purge pressure before start of pgm_ (P786</a>
-  </li>
-  <li level="1">
-   <a href="#_8_gas_purge_time_before_start_of_pgm_p787">8 Gas Purge time before start of pgm_ (P787</a>
-  </li>
-  <li level="1">
-   <a href="#_9_z_axis_park_position_p788">9 Z-Axis Park Position_ (P788</a>
-  </li>
-  <li level="1">
-   <a href="#_custom_parameters_4">CUSTOM_PARAMETERS 4</a>
-  </li>
-  <li level="1">
-   <a href="#_1_piercing_sensor_delay_time_p790">1 Piercing Sensor Delay Time_ (P790</a>
-  </li>
- </ul>
-</aside>
-
+                    <aside id="site-toc"></aside>
                 </div>
             </div>
             <nav class="pagination">
- <span class="prev"><a href="mfunctions.html">M FUNCTIONS</a></span>
- <span class="next"><a href="exhaustsys.html">EXHAUST SYSTEM</a></span>
+ <span class="prev"><a href="index.html">Technology Parameters</a></span>
+ <span class="next"><a href="mfunctions.html">M Functions</a></span>
 </nav>
 
         </div>
