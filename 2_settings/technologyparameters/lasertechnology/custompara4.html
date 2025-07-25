@@ -530,7 +530,46 @@ will be installed near the intensity light. Usually delay time will be 20-30ms.<
 <h2 id="_height_sensor_frequency_monitor">Height sensor frequency monitor</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><mark><strong>Lorem</strong></mark></p>
+<p>This parameter controls whether to monitor or ignore errors caused by sporadic
+variations in the height sensor frequency during the cutting head&#8217;s downward
+movement.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/heightsensor.png" alt="heightsensor" width="400"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>No Monitor</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Ignores both low and high frequency range errors.</p>
+</li>
+<li>
+<p>Use this setting to bypass errors caused by brief, irregular frequency
+changes.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Maximum Frequency Monitor</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Ignores low frequency errors but monitors and triggers errors for high
+frequency values.</p>
+</li>
+<li>
+<p>If the sensor frequency exceeds the calibrated maximum range, the machine
+will stop and display an error. This is to avoid a head collision with the sheet
+due to a high-impact force.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 </div>
 </div>
