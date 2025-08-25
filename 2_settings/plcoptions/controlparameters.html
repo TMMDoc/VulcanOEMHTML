@@ -533,7 +533,58 @@ used for HC 2 steps.</p>
 lubrication cycle.</p>
 </div>
 <div class="paragraph">
-<p><mark><strong>Lorem</strong></mark></p>
+<p><strong>Number of lubrication valves:</strong> It can be set to either 0 or 1.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>When set to 0</strong>:
+The cycle begins with X and Y axes moving simultaneously toward their positive
+and negative limits.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The lubrication ON/OFF cycle runs based on delay settings.</p>
+</li>
+<li>
+<p>The direction valve stays OFF throughout the process.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>When set to 1</strong>:
+The lubrication cycle is executed sequentially for each axis:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>X-axis moves first from its starting point to the positive limit (e.g., 0 to
+3000). Once it reaches the limit, it returns to 50% of the limit (e.g., 1500).
+During this movement, the lubrication direction valve remains OFF.</p>
+</li>
+<li>
+<p>After the X-axis completes its cycle, the Y-axis begins. It moves from 0 to
+its positive limit (e.g., 1500) and then returns to 50% of the limit (e.g.,
+750). During this phase, the lubrication direction valve is turned ON.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>X-Axis lubrication feed rate:</strong> This parameter defines the travel speed of the
+X-axis during the lubrication cycle.</p>
+</div>
+<div class="paragraph">
+<p><strong>Y-Axis lubrication feed rate:</strong> This parameter defines the travel speed of the
+Y-axis during the lubrication cycle.</p>
+</div>
+<div class="paragraph">
+<p><strong>Lubrication ON delay:</strong>
+This parameter defines the time interval of the lubrication ON/OFF cycle.
+It also defines the duration for which lubrication remains OFF before the next
+ON cycle begins.</p>
 </div>
 </div>
 </div>
@@ -544,7 +595,44 @@ lubrication cycle.</p>
 <p><span class="image"><img src="img/laserdeviceconfig.png" alt="laserdeviceconfig" width="700"></span></p>
 </div>
 <div class="paragraph">
-<p><mark><strong>Lorem</strong></mark></p>
+<p><strong>Minimum beam on/off time:</strong> This parameter is primarily used in the Nano-Joint
+Cutting function. It defines a threshold time for beam on/off control during
+nano-joint operations.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If the calculated Beam On/Off time is greater than the set threshold, the
+laser frequency remains unchanged.</p>
+</li>
+<li>
+<p>If the calculated Beam On/Off time is less than the threshold value, the
+frequency is automatically adjusted by the PLC to ensure optimal nano-joint
+performance.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The minimum allowable value for this parameter is 50 microseconds.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>AWS control delay time:</strong> This parameter is used to introduce a delay before
+outputting the PWM signal via Ether CAT. It is specifically applicable when the
+laser is operating in Fieldbus mode and cutting is controlled through AWS
+Control.</p>
+</div>
+<div class="paragraph">
+<p>The delay helps ensure proper synchronization between the control system and the
+laser output during cutting operations.</p>
 </div>
 </div>
 </div>
@@ -560,7 +648,38 @@ value for adjust. By using '+' &amp; '-' buttons can control the pressure during
 program running.</p>
 </div>
 <div class="paragraph">
-<p><mark><strong>Lorem</strong></mark></p>
+<p>This feature allows real-time adjustment of gas pressure during laser cutting,
+Only for DIN format operations. Two parameters are used for configuration:</p>
+</div>
+<div class="paragraph">
+<p><strong>Maximum gas pressure adjust:</strong> Sets the upper limit for gas pressure adjustment.
+The range is 0 to 4 bar.</p>
+</div>
+<div class="paragraph">
+<p><strong>Gas pressure adjust steps:</strong> Defines the incremental steps to reach the desired
+pressure.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For example: If the Maximum Gas Pressure Adjust is set to 3 bar and the Number
+of Steps is set to 5, the system calculates the step size as: Step Size =
+Maximum Gas Pressure / Number of Steps = 3 bar / 5 = 0.6 bar</p>
+</li>
+<li>
+<p>Starting from the normal gas pressure already defined, the pressure increases
+by 0.6 bar per step until it reaches the total of normal pressure + 3 bar.
+*The range is 0 to 20 steps.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This setup ensures smooth and controlled pressure adjustments during cutting
+operations. Gas pressure adjustment is only available while the program is
+running.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/adjustgaspressure2.png" alt="adjustgaspressure2" width="300"></span></p>
 </div>
 </div>
 </div>
@@ -575,10 +694,23 @@ program running.</p>
 move to 50 % of total stroke at high speed and then reduce to 30mm/min speed to
 go to touch the plate and start the calibration. In some machine the 50% stroke
 looks to be very big and take more time to touch the plate. So, user can
-configure the offset distance from negative limit for slow speed</p>
+configure the offset distance from negative limit for slow speed. There are two
+key configurable parameters in this process:</p>
 </div>
 <div class="paragraph">
-<p><mark><strong>Lorem</strong></mark></p>
+<p><strong>Offset distance from negative limit for slow speed</strong>: It allows the user to
+define a specific offset distance from the negative limit position, where the
+cutting head moves in a rapid speed till this position and move towards the
+sheet in a slow speed.</p>
+</div>
+<div class="paragraph">
+<p><strong>Tip touch offset value</strong>: This offset defines the distance between the nozzle tip and
+the sheet from where the first calibration point starts. It ensures no error due
+to frequency variation during calibration.</p>
+</div>
+<div class="paragraph">
+<p>These parameters allow flexibility to accommodate different machine builds and
+ensure precise and efficient calibration for optimal cutting performance.</p>
 </div>
 </div>
 </div>
@@ -594,7 +726,96 @@ and Y axis located in the machine to detect the edges of the sheet in order to
 avoid collision.</p>
 </div>
 <div class="paragraph">
-<p><mark><strong>Lorem</strong></mark></p>
+<p><strong>Slat start point along X-axis</strong>: This parameter defines the starting position of
+the slat table along the X-axis. By default, the start point is set to 0 mm,
+which means the machine considers this position as the origin for X-axis
+operations.</p>
+</div>
+<div class="paragraph">
+<p><strong>Slat start point along Y-axis</strong>: This parameter specifies the initial position
+of the slat table along the Y-axis. By default, the start point is set to 0 mm,
+indicating that this location is recognized as the origin for Y-axis movement.</p>
+</div>
+<div class="paragraph">
+<p>The below diagram illustrates the spacing between the slats and the support pins
+on the pallet.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/edgedetectionprogram2.png" alt="edgedetectionprogram2" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>Slats equal distance along X-axis</strong>: This parameter indicates the uniform
+spacing between each slat along the X-axis. For this specific pallet, the
+distance between slats is predefined as 70 mm.</p>
+</div>
+<div class="paragraph">
+<p><strong>Slats equal distance along Y-axis</strong>: This parameter specifies the uniform
+distance between each support pin along the Y-axis. For this pallet
+configuration, the peak-to-peak distance between support pins is a predefined
+value of 15 mm.</p>
+</div>
+<div class="paragraph">
+<p><strong>Edge correction along X-axis</strong>: This parameter allows for correcting the edge
+detection reference along the X-axis. After edge detection process, the
+correction offset set in this parameter is applied to X-axis.</p>
+</div>
+<div class="paragraph">
+<p><strong>Edge correction along Y-axis</strong>: This parameter allows for correcting the edge
+detection reference along the Y-axis. After edge detection process, the
+correction offset set in this parameter is applied to Y-axis.</p>
+</div>
+<div class="paragraph">
+<p><strong>Speed to detect the sheet edge</strong>: The speed used to detect the sheet edge during
+the edge detection process the axis will move with the speed set in this
+parameter. This predefined speed ensures accurate and reliable detection of the
+sheet edge.</p>
+</div>
+<div class="paragraph">
+<p><strong>Sheet stop position</strong>: The sheet stop for raw material stacking in the machine
+layout can be configured in different corner positions.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/edgedetectionprogram3.png" alt="edgedetectionprogram3" width="200"></span></p>
+</div>
+<div class="paragraph">
+<p>The diagram above illustrates the four possible Sheet Stop Positions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Position 1 - Bottom-right corner</p>
+</li>
+<li>
+<p>Position 2 - Bottom-left corner</p>
+</li>
+<li>
+<p>Position 3 - Top-left corner</p>
+</li>
+<li>
+<p>Position 4 - Top-right corner</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The automation device is configured to align with the predefined sheet stop
+corner, which directly influences the sheet loading position within the machine.
+The sheet stop positions are predefined for these configurations.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/edgedetectionprogram4.png" alt="edgedetectionprogram4" width="300"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>Start height sensor calibration before edge detect</strong>: Enables the system to
+perform height sensor calibration automatically before initiating the edge
+detection process.</p>
+</div>
+<div class="paragraph">
+<p><strong>Acknowledge the sheet origin point</strong>: It is used to confirm and record the
+sheet&#8217;s origin position in the machine before actual cutting process will start.</p>
+</div>
+<div class="paragraph">
+<p><strong>Use pilot diode for start position</strong>: Enables the use of the pilot diode to
+accurately identify the starting position before edge detection begins.</p>
 </div>
 </div>
 </div>
@@ -610,7 +831,50 @@ with its length and width of X and Y axis installed in the machine to avoid the
 collision. It helps especially while running edge detection program.</p>
 </div>
 <div class="paragraph">
-<p><mark><strong>Lorem</strong></mark></p>
+<p><strong>Number of stoppers along X-axis</strong>:
+Specifies the total number of stoppers positioned along the X-axis.</p>
+</div>
+<div class="paragraph">
+<p><strong>Number of stoppers along Y-axis</strong>:
+Specifies the total number of stoppers positioned along the Y-axis.</p>
+</div>
+<div class="paragraph">
+<p><strong>Stopper length along X-axis</strong>:
+Defines the physical length of each stopper in the direction of the X-axis.</p>
+</div>
+<div class="paragraph">
+<p><strong>Stopper width along Y-axis</strong>:
+Defines the physical width of each stopper in the direction of the Y-axis.</p>
+</div>
+<div class="paragraph">
+<p><strong>Distance of first stopper from origin along X-axis</strong>:
+Indicates how far the first stopper is located from the origin (0,0) along the
+X-axis.</p>
+</div>
+<div class="paragraph">
+<p><strong>Distance between first and second stopper along X-axis</strong>:
+Specifies the spacing between the first and second stopper in the X-axis
+direction.</p>
+</div>
+<div class="paragraph">
+<p><strong>Distance between second and third stopper along X-axis</strong>:
+Specifies the spacing between the second and third stopper in the X-axis
+direction.</p>
+</div>
+<div class="paragraph">
+<p><strong>Distance of first stopper from origin along Y-axis</strong>:
+Indicates how far the first stopper is located from the origin (0,0) along the
+Y-axis.</p>
+</div>
+<div class="paragraph">
+<p><strong>Distance between first and second stopper along Y-axis</strong>:
+Specifies the spacing between the first and second stopper in the Y-axis
+direction.</p>
+</div>
+<div class="paragraph">
+<p><strong>Distance between second and third stopper along Y-axis</strong>:
+Specifies the spacing between the second and third stopper in the Y-axis
+direction.</p>
 </div>
 </div>
 </div>
@@ -621,7 +885,43 @@ collision. It helps especially while running edge detection program.</p>
 <p><span class="image"><img src="img/suctionantiblowvalves.png" alt="suctionantiblowvalves" width="700"></span></p>
 </div>
 <div class="paragraph">
-<p><mark><strong>Lorem</strong></mark></p>
+<p><strong>Number of anti blow valves</strong>: The machine is equipped with four anti-blow valves.</p>
+</div>
+<div class="paragraph">
+<p><strong>Anti blow valve ON time</strong>: Each anti-blow valve remains activated for 0.2
+seconds during operation.</p>
+</div>
+<div class="paragraph">
+<p><strong>Anti-Blow valve wait time</strong>: A wait time of 20 seconds is applied between
+successive activations of the anti-blow valves to ensure proper functioning.</p>
+</div>
+<div class="paragraph">
+<p><strong>Offline anti blow lag time</strong>: This parameter enables the Anti Blow valve to be
+on even after the exhaust system is off</p>
+</div>
+<div class="paragraph">
+<p><strong>Filter sensor</strong>: A temperature detection sensor is integrated into the suction
+filter system of the L99 laser to monitor filter safety and prevent potential
+fire hazards.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>When the filter temperature is within a safe range (below 70°C), the PLC input
+signal remains ON (1).</p>
+</li>
+<li>
+<p>If the filter temperature exceeds 70°C, indicating a possible overheating or
+fire risk, the PLC input signal switches OFF (0).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>System Response</strong>: If the filter temperature feedback signal is OFF, the exhaust
+motor will automatically shut down to ensure operational safety.</p>
+</div>
+<div class="paragraph">
+<p>This safety function can be enabled or disabled via the machine parameters.</p>
 </div>
 </div>
 </div>
@@ -632,8 +932,119 @@ collision. It helps especially while running edge detection program.</p>
 <p><span class="image"><img src="img/gaspressureadjustlevels.png" alt="gaspressureadjustlevels" width="700"></span></p>
 </div>
 <div class="paragraph">
-<p>In PLC options, select Control parameters to configure the Command and Feedback
-correction of High pressure and Low-pressure gas regulator in percentage.</p>
+<p>The following parameters are used to control the Set and Actual value of the gas
+pressure in the Analog control gas pressure regulator. These parameters are
+mainly used in the machines where Analog pressure regulator is used.</p>
+</div>
+<div class="paragraph">
+<p><strong>Gas configuration</strong>:
+In some machines, they have low pressure regulator and High-pressure regulator
+separately. Hence to define which gas is used in Low pressure line and which gas
+is used in high pressure line, these parameters are used.</p>
+</div>
+<div class="paragraph">
+<p><strong>HP gas regulator command correction</strong>:
+This parameter is used to define a correction factor for the commanded value for
+High Pressure regulator.</p>
+</div>
+<div class="paragraph">
+<p><strong>HP gas regulator feedback correction</strong>:
+This parameter is used to define a correction factor for the feedback value for
+High Pressure regulator.</p>
+</div>
+<div class="paragraph">
+<p><strong>LP gas regulator command correction</strong>:
+This parameter is used to define a correction factor for the commanded value for
+Low Pressure regulator.</p>
+</div>
+<div class="paragraph">
+<p><strong>LP gas regulator feedback correction</strong>:
+This parameter is used to define a correction factor for the feedback value for
+Low Pressure regulator.</p>
+</div>
+<div class="paragraph">
+<p><strong>Calibration</strong>:
+This parameter is used to enable or disable gas pressure calibration.
+Calibration is required to ensure accurate control and feedback of the pressure
+value in analogue control pressure regulator.</p>
+</div>
+<div class="paragraph">
+<p><strong>Calibration Procedure</strong>:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select the gas used in the machine from the gas configuration dropdown.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/gaspressureadjustlevels1.png" alt="gaspressureadjustlevels1" width="700"></span></p>
+</div>
+</li>
+<li>
+<p>Enable the calibration checkbox for the analogue control of pressure valve.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/gaspressureadjustlevels2.png" alt="gaspressureadjustlevels2" width="700"></span></p>
+</div>
+</li>
+<li>
+<p>Check the values of High Pressure &amp; Low Pressure Valves of the gas in Custom
+parameter 2 under Tech Parameters &#8594; Laser Technology.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/gaspressureadjustlevels3.png" alt="gaspressureadjustlevels3" width="700"></span></p>
+</div>
+</li>
+<li>
+<p>Go to the Controls Page, select the Gas Purge Program, and check the
+Calibration box.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This option appears only if Calibration is enabled in the PLC options.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/gaspressureadjustlevels4.png" alt="gaspressureadjustlevels4" width="700"></span></p>
+</div>
+</li>
+<li>
+<p>Once the calibration checkbox is enabled, the table will be displayed as in the
+below image. Select Manual mode or Auto mode for calibration, Feedback, Number of Points,
+DA Autofill according to the need.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/gaspressureadjustlevels5.png" alt="gaspressureadjustlevels5" width="700"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Manual Mode</strong>: Press start button for next output.<br></p>
+</li>
+<li>
+<p><strong>Auto Mode</strong>:  For defined delay, will output the next value.<br></p>
+</li>
+<li>
+<p><strong>Feedback</strong>: If enabled, the Valve feedback is saved for the monitoring
+of the gas pressure, else it will save the set value (no monitoring).<br></p>
+</li>
+<li>
+<p><strong>Number of Points</strong>: It defines the number of calibration points to be stored.</p>
+</li>
+<li>
+<p><strong>DA Auto fill</strong>: If enabled, it will fill the DA output based on
+the Number of Points.<br></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Start the Calibration process by pressing the start button, enter the Gas
+pressure for each output values.</p>
+</li>
+</ol>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -642,7 +1053,10 @@ correction of High pressure and Low-pressure gas regulator in percentage.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Range has to be between -10 to 10.
+a. Calibration process can be started the from the selected index also.<br>
+b. The calibration table will be stored for each gas type.<br>
+c. Max pressure value will be displayed depends on the Gas configuration and
+Pressure values entered in Custom Parameters 2 under Tech Parameters.
 </td>
 </tr>
 </table>
@@ -694,24 +1108,40 @@ when program is running.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_nozzle_changer_configuration">Nozzle changer configuration</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><span class="image"><img src="img/nozzlechangerconfig.png" alt="nozzlechangerconfig" width="700"></span></p>
-</div>
-<div class="paragraph">
-<p><mark><strong>Lorem</strong></mark></p>
-</div>
-</div>
-</div>
-<div class="sect1">
 <h2 id="_traverse_blow_valve_configuration">Traverse blow valve configuration</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><span class="image"><img src="img/traversalblowvalveconfig.png" alt="traversalblowvalveconfig" width="700"></span></p>
 </div>
 <div class="paragraph">
-<p><mark><strong>Lorem</strong></mark></p>
+<p>The Traversal Blow Valve is responsible for regulating the air pressure used
+during the traverse blowing process. This function is controlled by a Pressure
+Regulator Valve, which can be configured through the Miscellaneous Control
+Parameters. Two key parameters must be set to ensure correct operation: the
+control method and the maximum pressure.</p>
+</div>
+<div class="paragraph">
+<p><strong>Control method</strong>: This parameter defines how the pressure regulator valve is
+controlled:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>0 - Voltage Control: The valve is driven by a voltage signal.</p>
+</li>
+<li>
+<p>1 - Current Control: The valve is driven by a current signal.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Maximum pressure</strong>: This parameter sets the upper limit for the pressure applied
+during traverse blowing.</p>
+</div>
+<div class="paragraph">
+<p>These parameters are essential for the safe and efficient operation of the
+traversal blow system and must be configured appropriately during system setup
+or maintenance.</p>
 </div>
 </div>
 </div>
@@ -722,7 +1152,32 @@ when program is running.</p>
 <p><span class="image"><img src="img/lpgdelaytime.png" alt="lpgdelaytime" width="700"></span></p>
 </div>
 <div class="paragraph">
-<p><mark><strong>Lorem</strong></mark></p>
+<p>The Laser Pulsing Gate (LPG) is primarily used during fly-cutting operations,
+where the cutting head moves continuously along the traverse path, but the laser
+pulses are turned on and off without stopping the head movement. This technique
+is commonly applied for high-speed, repetitive cuts such as perforations or
+patterns.</p>
+</div>
+<div class="paragraph">
+<p>The LPG on and off delay parameters define the timing of the LPG signal.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>LPG On delay</strong>:
+Specifies the delay time before the laser pulse is turned on after the gate
+signal is activated.</p>
+</li>
+<li>
+<p><strong>LPG Off delay</strong>:
+Specifies the delay time before the laser pulse is turned off after the gate
+signal is deactivated.</p>
+</li>
+<li>
+<p><strong>MQ search look ahead time</strong>: This parameter is for fly cut functions, It helps
+to avoid the continuous beam ON at higher speed &amp; also small distance.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -733,7 +1188,47 @@ when program is running.</p>
 <p><span class="image"><img src="img/sealinggaspressuremon.png" alt="sealinggaspressuremon" width="700"></span></p>
 </div>
 <div class="paragraph">
-<p><mark><strong>Lorem</strong></mark></p>
+<p>This parameter is used for the laser above 3kw.</p>
+</div>
+<div class="paragraph">
+<p>The Sealing Gas Monitoring function is designed to ensure the safe and reliable
+operation of the sealing gas system by tracking its pressure levels. The system
+continuously monitors the sealing gas pressure and provides two levels of
+alerts:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Warning Range - 30 - 60 mbar</p>
+</li>
+<li>
+<p>Error Range - 20 - 60 mbar</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Minimum warning level</strong>:
+This is the lower threshold of the sealing gas pressure that will trigger a
+warning if the pressure drops below this value.<br>
+Default: 30 mbar</p>
+</div>
+<div class="paragraph">
+<p><strong>Maximum warning level</strong>:
+This is the upper threshold of the sealing gas pressure that will trigger a
+warning if the pressure rises above this value.<br>
+Default: 60 mbar</p>
+</div>
+<div class="paragraph">
+<p><strong>Minimum error level</strong>:
+This is the critical low limit of the sealing gas pressure. If the pressure
+drops below this value, the system logs it as an error, not just a warning.<br>
+Default: 20 mbar</p>
+</div>
+<div class="paragraph">
+<p><strong>Maximum error level</strong>:
+This is the critical high limit of the sealing gas pressure. If the pressure
+exceeds this value, an error is raised instead of a warning.<br>
+Default: 60 mbar</p>
 </div>
 </div>
 </div>
@@ -744,7 +1239,31 @@ when program is running.</p>
 <p><span class="image"><img src="img/protectiveglassmonitor.png" alt="protectiveglassmonitor" width="700"></span></p>
 </div>
 <div class="paragraph">
-<p><mark><strong>Lorem</strong></mark></p>
+<p>The Protective Glass Monitoring function is designed to detect contamination or
+damage to the protective glass and ensure safe and efficient laser operation.</p>
+</div>
+<div class="paragraph">
+<p><strong>Offline broken factor and Online broken factor</strong>:
+This parameters are used to evaluate the protective window condition.</p>
+</div>
+<div class="paragraph">
+<p><strong>Warning limit</strong>:
+When the glass condition drops below 60%, a warning is generated.</p>
+</div>
+<div class="paragraph">
+<p><strong>Error limit</strong>:
+If the glass condition falls below 20%, an error is triggered. This may stop the
+laser process.</p>
+</div>
+<div class="paragraph">
+<p><strong>Delay time to report warning</strong>:
+The system waits for this duration before confirming and displaying a warning
+status.</p>
+</div>
+<div class="paragraph">
+<p><strong>Stop the program, if dirty</strong>:
+A configurable checkbox option allows users to enable automatic program stops
+when the protective glass is dirty or damaged.</p>
 </div>
 </div>
 </div>
@@ -793,9 +1312,6 @@ when program is running.</p>
   </li>
   <li level="1">
    <a href="#_cutting_head_warning_levels">Cutting head warning levels</a>
-  </li>
-  <li level="1">
-   <a href="#_nozzle_changer_configuration">Nozzle changer configuration</a>
   </li>
   <li level="1">
    <a href="#_traverse_blow_valve_configuration">Traverse blow valve configuration</a>

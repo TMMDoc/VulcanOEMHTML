@@ -601,7 +601,13 @@ position to the given command.</p>
 <h2 id="_adaptive_optics">Adaptive optics</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><mark><strong>Lorem</strong></mark></p>
+<p>This option is used to adjust the focal distance using a special deformable
+mirror.</p>
+</div>
+<div class="paragraph">
+<p>The focal length is dynamically controlled by air pressure, which causes the
+mirror to become concave or convex based on the applied pressure. This allows
+for precise control of the laser focus during processing.</p>
 </div>
 </div>
 </div>
@@ -609,7 +615,54 @@ position to the given command.</p>
 <h2 id="_nano_joints">Nano Joints</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><mark><strong>Lorem</strong></mark></p>
+<p>Nanojoints are small, intentional connections left between cut parts to prevent
+them from falling or tipping.</p>
+</div>
+<div class="paragraph">
+<p>When "Nanojoints" is Enabled:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>G824</code> Nanojoint NC code will be converted to the correct format.</p>
+</li>
+<li>
+<p>Nanojoint parameters will be visible in the Laser Technology Table (LTT).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When "Nanojoints" is Disabled:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>G824</code> Nanojoint NC code will not be converted correctly.</p>
+</li>
+<li>
+<p>Nanojoint parameters will not appear in the LTT.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Nanojoint functionality strictly follows the Machine Settings, regardless
+of laser power.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If Nanojoints are not enabled in Machine Settings, the following error popup
+will appear:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/lasertechmiscnanojoints.png" alt="lasertechmiscnanojoints" width="400"></span></p>
 </div>
 </div>
 </div>

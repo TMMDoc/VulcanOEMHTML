@@ -6,12 +6,12 @@ Folders=22
 Pages=368
 UIXlate=False, DebugUIXlate=False, Language=EN
 
-contents.txt • 253116.113143
+contents.txt • 253116.113142
 Features.adoc • Features
 impressum.adoc • Impressum
 index.adoc • Vulcan OEM Manual
 manifest.txt • 255225.115240
-1_Intro\contents.txt • 253116.113143
+1_Intro\contents.txt • 253116.113142
 1_Intro\DINLST.adoc • Changing the GCode format
 1_Intro\Flavor.adoc • Changing the Flavor
 1_Intro\index.adoc • General
@@ -22,7 +22,7 @@ manifest.txt • 255225.115240
 2_settingsFunctions\adaptiveOptics.adoc • KL59, Laser & Optics
 2_settingsFunctions\automationinterface.adoc • Automation Interface
 2_settingsFunctions\Backup.adoc • Backup settings
-2_settingsFunctions\contents.txt • 253116.113143
+2_settingsFunctions\contents.txt • 253116.113142
 2_settingsFunctions\corneropti.adoc • Automated corner optimization
 2_settingsFunctions\DCA.adoc • DCA settings
 2_settingsFunctions\Diagnostics.adoc • Error data, backup, restore
@@ -39,28 +39,28 @@ manifest.txt • 255225.115240
 2_settingsFunctions\Suctionlayout.adoc • Suction cup layout
 3_Errormsg\contents.txt • 253013.113012
 3_Errormsg\index.adoc • Error messages
-4_Machinespecific\contents.txt • 253013.113015
+4_Machinespecific\contents.txt • 253013.113014
 4_Machinespecific\index.adoc • Manuals
 4_Machinespecific\manuals.adoc • Repair manuals
-5_Trace\contents.txt • 253013.113015
+5_Trace\contents.txt • 253013.113014
 5_Trace\index.adoc • Trace
-6_Logfile\contents.txt • 253013.113015
+6_Logfile\contents.txt • 253013.113014
 6_Logfile\index.adoc • Logging
 Docs\Automation signals exchange.docx
 experimental\analogGas.adoc • Analog Gas Calibration
 experimental\AutomatedFocuscomb.adoc • Automated Focus Comb
-experimental\contents.txt • 253116.113143
+experimental\contents.txt • 253116.113142
 experimental\DFC.adoc • Dynamic Focus Control (DFC)
 experimental\Graphicplace.adoc • Camera based part placement
 experimental\highPoweroptions.adoc • High Power Options
 experimental\Index.adoc • Experimental features
 experimental\NozzleCentering.adoc • Camera based Nozzle Centering
 experimental\PraxisVulcan.adoc • Direct connection to Praxis
-LSTCommands\contents.txt • 253116.113143
+LSTCommands\contents.txt • 253116.113142
 LSTCommands\Index.adoc • LST commands
-Programmingmanual\contents.txt • 253116.113143
+Programmingmanual\contents.txt • 253116.113142
 Programmingmanual\Index.adoc • Programming manual
-1_Intro\Installation\contents.txt • 253116.113143
+1_Intro\Installation\contents.txt • 253116.113142
 1_Intro\Installation\index.adoc • Installation
 2_Settings\AxisParameters\ConfigLPC.adoc • Configuration of Laser Power Control (LPC)
 2_Settings\AxisParameters\ConfigPallet.adoc • :imagesdir: img
@@ -510,29 +510,29 @@ Programmingmanual\Index.adoc • Programming manual
 3_Errormsg\plc_error\_contents.txt
 4_Machinespecific\ControlManuals\ErrorMessagesNCControllers_EN.pdf
 4_Machinespecific\ControlManuals\LC800ProgrammingManual_V1.61.pdf
-4_Machinespecific\L99schematics\contents.txt • 253013.113013
+4_Machinespecific\L99schematics\contents.txt • 253013.113012
 4_Machinespecific\L99schematics\index.adoc • Schematics
 4_Machinespecific\L99schematics\indx.txt
 4_Machinespecific\L99schematics\indx2.txt
 4_Machinespecific\L99schematics\Schematics.pdf
 4_Machinespecific\L99schematics\tst.asv
 4_Machinespecific\L99schematics\tst.m
-4_Machinespecific\L99serviceManual\contents.txt • 253013.113013
+4_Machinespecific\L99serviceManual\contents.txt • 253013.113012
 4_Machinespecific\L99serviceManual\index.adoc • L99 Service manual
 4_Machinespecific\overview\1_Laser&components.pdf
 4_Machinespecific\overview\2_DriveSystem.pdf
 4_Machinespecific\overview\3_electrical.pdf
-4_Machinespecific\overview\contents.txt • 253013.113015
+4_Machinespecific\overview\contents.txt • 253013.113014
 4_Machinespecific\overview\index.adoc • Overview
-Programmingmanual\DIN\contents.txt • 253116.113143
+Programmingmanual\DIN\contents.txt • 253116.113142
 Programmingmanual\DIN\Index.adoc • DIN Programming
-Programmingmanual\LST\contents.txt • 253116.113143
+Programmingmanual\LST\contents.txt • 253116.113142
 Programmingmanual\LST\Index.adoc • LST Programming
 Programmingmanual\LST\TCWrite.adoc • TCWrite
 2_Settings\AxisParameters\ConfigurationParameters\AxisAddress.adoc • :imagesdir: img
 2_Settings\AxisParameters\ConfigurationParameters\AxisConnection.adoc • :imagesdir: img
 2_Settings\AxisParameters\ConfigurationParameters\AxisProperties.adoc • :imagesdir: img
-2_Settings\AxisParameters\ConfigurationParameters\contents.txt • 252425.122455
+2_Settings\AxisParameters\ConfigurationParameters\contents.txt • 252425.122454
 2_Settings\AxisParameters\ConfigurationParameters\Index.adoc • :imagesdir: img
 2_Settings\AxisParameters\ConfigurationParameters\InterpolationFilter.adoc • :imagesdir: img
 2_Settings\AxisParameters\ConfigurationParameters\SyncConnection.adoc • Sync Connection
@@ -541,7 +541,7 @@ Programmingmanual\LST\TCWrite.adoc • TCWrite
 2_Settings\PLCOptions\FunctionParameters\EmulateHardware.adoc • :imagesdir: img
 2_Settings\PLCOptions\FunctionParameters\Index.adoc • :imagesdir: img
 2_Settings\PLCOptions\FunctionParameters\JogPara.adoc • :imagesdir: img
-2_Settings\PLCOptions\FunctionParameters\LaserTechMisc.adoc • :imagesdir: img
+2_Settings\PLCOptions\FunctionParameters\LaserTechMisc.adoc • Laser Technology Miscellaneous Control
 2_Settings\PLCOptions\FunctionParameters\MachineMisc.adoc • :imagesdir: img
 2_Settings\PLCOptions\FunctionParameters\Miscellaneous.adoc • :imagesdir: img
 2_Settings\PLCOptions\FunctionParameters\NozzleClean.adoc • :imagesdir: img
@@ -691,7 +691,7 @@ Programmingmanual\LST\TCWrite.adoc • TCWrite
 4_Machinespecific\L99schematics\img\Schematics-99.pdf
 4_Machinespecific\L99schematics\img\SWD.pdf
 4_Machinespecific\L99serviceManual\Control&electricalsettingwork\Backup_Restore.adoc • 
-4_Machinespecific\L99serviceManual\Control&electricalsettingwork\contents.txt • 253013.113013
+4_Machinespecific\L99serviceManual\Control&electricalsettingwork\contents.txt • 253013.113012
 4_Machinespecific\L99serviceManual\Control&electricalsettingwork\Deltafrequencyconverter.adoc • 
 4_Machinespecific\L99serviceManual\Control&electricalsettingwork\EckelmannLaserCore800.adoc • 
 4_Machinespecific\L99serviceManual\Control&electricalsettingwork\Generalwork.adoc • 
@@ -700,11 +700,11 @@ Programmingmanual\LST\TCWrite.adoc • TCWrite
 4_Machinespecific\L99serviceManual\Control&electricalsettingwork\WorkingonPanelIPC.adoc • 
 4_Machinespecific\L99serviceManual\Control&electricalsettingwork\Yaskawadrive.adoc • 
 4_Machinespecific\L99serviceManual\Installationandcommissioning\Commissioning(L99).adoc • 
-4_Machinespecific\L99serviceManual\Installationandcommissioning\contents.txt • 253013.113013
+4_Machinespecific\L99serviceManual\Installationandcommissioning\contents.txt • 253013.113012
 4_Machinespecific\L99serviceManual\Installationandcommissioning\index.adoc • Installation and commissioning
 4_Machinespecific\L99serviceManual\Installationandcommissioning\Installation(L99).adoc • 
 4_Machinespecific\L99serviceManual\Laser-specificrepairandsettingwork\Cleaningandsettingwork.adoc • 
-4_Machinespecific\L99serviceManual\Laser-specificrepairandsettingwork\contents.txt • 253013.113013
+4_Machinespecific\L99serviceManual\Laser-specificrepairandsettingwork\contents.txt • 253013.113012
 4_Machinespecific\L99serviceManual\Laser-specificrepairandsettingwork\index.adoc • Laser-specific repair and setting work
 4_Machinespecific\L99serviceManual\Laser-specificrepairandsettingwork\Nitrogenventilationmonitoring.adoc • 
 4_Machinespecific\L99serviceManual\Laser-specificrepairandsettingwork\Powermeasurement.adoc • 
@@ -713,7 +713,7 @@ Programmingmanual\LST\TCWrite.adoc • TCWrite
 4_Machinespecific\L99serviceManual\Laser-specificrepairandsettingwork\WorkingonMCII.adoc • 
 4_Machinespecific\L99serviceManual\Laser-specificrepairandsettingwork\WorkingonQDconnector.adoc • 
 4_Machinespecific\L99serviceManual\Mechanicalrepairandsettingwork\Centrallubrication.adoc • 
-4_Machinespecific\L99serviceManual\Mechanicalrepairandsettingwork\contents.txt • 253013.113013
+4_Machinespecific\L99serviceManual\Mechanicalrepairandsettingwork\contents.txt • 253013.113012
 4_Machinespecific\L99serviceManual\Mechanicalrepairandsettingwork\Cuttinggassupply.adoc • 
 4_Machinespecific\L99serviceManual\Mechanicalrepairandsettingwork\Exhaustsystem.adoc • 
 4_Machinespecific\L99serviceManual\Mechanicalrepairandsettingwork\Generalwork.adoc • 
@@ -725,7 +725,7 @@ Programmingmanual\LST\TCWrite.adoc • TCWrite
 4_Machinespecific\L99serviceManual\Mechanicalrepairandsettingwork\WorkingonZaxis.adoc • 
 4_Machinespecific\L99serviceManual\TruLaserSeries1000BasicEdition~(L99)~\Additionalsafetyinformationforservicetechnicians.adoc • 
 4_Machinespecific\L99serviceManual\TruLaserSeries1000BasicEdition~(L99)~\BM111cuttingunit.adoc • 
-4_Machinespecific\L99serviceManual\TruLaserSeries1000BasicEdition~(L99)~\contents.txt • 253013.113013
+4_Machinespecific\L99serviceManual\TruLaserSeries1000BasicEdition~(L99)~\contents.txt • 253013.113012
 4_Machinespecific\L99serviceManual\TruLaserSeries1000BasicEdition~(L99)~\Generalsafetyinformationforservicetechnicians.adoc • 
 4_Machinespecific\L99serviceManual\TruLaserSeries1000BasicEdition~(L99)~\Hazardsduetolaserradiation(TruFiber).adoc • 
 4_Machinespecific\L99serviceManual\TruLaserSeries1000BasicEdition~(L99)~\index.adoc • General information

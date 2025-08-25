@@ -490,14 +490,291 @@
                 <div id="site-toc-left">
                     <article id="article">
                         <h1>Logging</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>tbd</p>
+<p>The system automatically generates logs to track the status and operation of the
+machine. These logs are stored in the following path:</p>
+</div>
+<div class="paragraph">
+<p><code>C:\ProgramData\Metamation\Vulcan\Log\Year (YYYY)\Month (MM)\Date (DD)</code></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_log_types_and_descriptions">Log types and descriptions</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_1_error_log">1. Error log</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Purpose</strong>: Records all alarm and message history.</p>
+</li>
+<li>
+<p><strong>Use</strong>: Helps technicians identify when and what type of error occurred.</p>
+</li>
+<li>
+<p><strong>Typical Content</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Timestamp</p>
+</li>
+<li>
+<p>Error/Alarm Code</p>
+</li>
+<li>
+<p>Message Description</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/errorlog.png" alt="ErrorLog"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_protective_window_monitoring_log_lumi_measure_log">2. Protective window monitoring log (Lumi measure log)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Purpose</strong>: Tracks contamination and replacement events for the protective
+window.</p>
+</li>
+<li>
+<p><strong>Use</strong>: Ensures maintenance is performed at appropriate intervals to maintain
+laser quality and safety.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Timestamp</p>
+</li>
+<li>
+<p>Contamination Detected</p>
+</li>
+<li>
+<p>Replacement Done</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/lumimeasure.png" alt="LumiMeasure"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_mk_log">3. Mk log</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Purpose</strong>: Records all changes made to Mk parameters.</p>
+</li>
+<li>
+<p><strong>Use</strong>: Allows for traceability and rollback of configuration changes.</p>
+</li>
+<li>
+<p><strong>Typical Content</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Timestamp</p>
+</li>
+<li>
+<p>Parameter Name</p>
+</li>
+<li>
+<p>Previous Value</p>
+</li>
+<li>
+<p>New Value</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/mklog.png" alt="MKLog"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_4_operation_log">4. Operation log</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Purpose</strong>: Captures the background operation history of Vulcan.</p>
+</li>
+<li>
+<p><strong>Use</strong>: Useful for auditing machine behavior and system-level operations.</p>
+</li>
+<li>
+<p><strong>Typical Content</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Timestamp</p>
+</li>
+<li>
+<p>Operation Type</p>
+</li>
+<li>
+<p>Description/Status</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/operationlog.png" alt="OperationLog"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_5_trace_log">5. Trace log</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Log File Path</strong>: <code>C:\ProgramData\Metamation\Vulcan\Log\Trace</code>.</p>
+</li>
+<li>
+<p><strong>Purpose</strong>: Captures the trace (360-Height Control Sequence and 366-Laser
+Sequence).</p>
+</li>
+<li>
+<p><strong>Use</strong>: Useful for diagnosis of any sporadic issues happened during cutting
+Process.</p>
+</li>
+<li>
+<p><strong>Typical Content</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Timestamp</p>
+</li>
+<li>
+<p>Trace No</p>
+</li>
+<li>
+<p>Description</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/tracelog.png" alt="TraceLog" width="600"></span></p>
+</div>
+<div class="sect3">
+<h4 id="_how_to_enable_trace_logging">How to enable trace logging</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Edit the Experimental settings</p>
+</li>
+<li>
+<p><strong>Navigate to</strong>: <code>C:\ProgramData\Metamation\Vulcan\Data\Experimental.ini</code> and
+change the condition from false to true in "IsTraceGathererActive="</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/experimental.png" alt="Experimental" width="400"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_trace_file_settings">Trace file settings</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Interval</strong>: Trace files are gathered every 10 seconds.</p>
+</li>
+<li>
+<p><strong>Retention</strong>: The trace files are kept for 2 days and then automatically
+deleted.</p>
+</li>
+<li>
+<p><strong>Trace Numbers</strong>: Trace files include numbers 360(Height Control) and
+366(Laser).</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_changing_trace_file_settings">Changing trace file settings</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Navigate to</strong>: <code>C:\Program Files\Metamation\Vulcan\TraceGatherer</code>.</p>
+</li>
+<li>
+<p>Edit the settings.json file.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Open with Notepad++.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/jsonfile.png" alt="JSONFile" width="700"></span></p>
+</div>
+</li>
+<li>
+<p>Make the necessary changes to the settings.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Close the application before editing settings.json to avoid conflicts
+or corruption.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
 </div>
 
                     </article>
                 </div>
                 <div id="site-toc-holder">
-                    <aside id="site-toc"></aside>
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_log_types_and_descriptions">Log types and descriptions</a>
+  </li>
+  <li level="2">
+   <a href="#_1_error_log">1. Error log</a>
+  </li>
+  <li level="2">
+   <a href="#_2_protective_window_monitoring_log_lumi_measure_log">2. Protective window monitoring log (Lumi measure log)</a>
+  </li>
+  <li level="2">
+   <a href="#_3_mk_log">3. Mk log</a>
+  </li>
+  <li level="2">
+   <a href="#_4_operation_log">4. Operation log</a>
+  </li>
+  <li level="2">
+   <a href="#_5_trace_log">5. Trace log</a>
+  </li>
+ </ul>
+</aside>
+
                 </div>
             </div>
             <nav class="pagination">
